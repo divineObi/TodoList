@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: purple;
+    padding: 10px;
+}
+
+.container .todo {
+    max-width: 450px;
+    min-height: 20vh;
+    margin: 100px auto 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: lavender;
+}
+
+.container .todo .header h2 {
+    /* text-align: center; */
+    font-size: 28px;
+}
+
+.container .todo .main {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    gap: 10px;
+}
+
+.mainList {
+    opacity: 0;
+    transform: translateY(20px); /* Start 20px below */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* 0.5s transition for both */
+}
+
+.mainList.visible {
+    opacity: 1;
+    transform: translateY(0); /* Slide to original position */
+}
+
+.text-field {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: black;
+    padding: 15px;
+    font-weight: 500;
+}
+
+.addButton {
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 15px 30px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.tasks ul li {
+    list-style: none;
+    user-select: none;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.checker {
+    margin-right: 10px;
+}
+
+.editButton, .deleteButton, .saveButton {
+    margin-right: 15px;
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 6px 12px;
+    font-weight: 500;
+    color: whitesmoke;
+}
+
+.editButton {
+    background-color: rgb(226, 113, 14);
+    border: 1px solid rgb(226, 113, 14);
+}
+
+.deleteButton {
+    background-color: red;
+    border: 1px solid red;
+}
+
+.saveButton {
+    background-color: green;
+    border: 1px solid green;
+    display: none;
+}
+
+.task-text-field {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: black;
+    font-weight: 500;
+}
+
+.buttons, .twinButtons {
+    display: flex;
+}
